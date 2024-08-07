@@ -21,15 +21,6 @@ namespace FinalProject
             this.email = email;
             this.coins = coins;
             this.products = products;
-
-            this.Load += new EventHandler(GameForm_Load);
-        }
-
-        private void GameForm_Load(object sender, EventArgs e)
-        {
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.RightToLeft = RightToLeft.Yes;
-            this.RightToLeftLayout = true;
         }
 
         private void buttonHebrewGames_Click(object sender, EventArgs e)
@@ -76,7 +67,7 @@ namespace FinalProject
             }
 
             mainForm.Show();
-            mainForm.BringToFront();
+            mainForm.BringToFront(); // Bring the main form to the front
             this.Close();
         }
 

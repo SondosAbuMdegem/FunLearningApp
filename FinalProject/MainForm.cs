@@ -29,25 +29,31 @@ namespace FinalProject
         private void buttonGames_Click(object sender, EventArgs e)
         {
             this.Hide();
-            GameForm gameForm = new GameForm(username, userId, email, coins, products);
-            gameForm.ShowDialog();
+            using (GameForm gameForm = new GameForm(username, userId, email, coins, products))
+            {
+                gameForm.ShowDialog();
+            }
             this.Show();
         }
 
         private void buttonShop_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ShopForm shopForm = new ShopForm(username, userId, email, coins, products);
-            shopForm.ShowDialog();
+            using (ShopForm shopForm = new ShopForm(username, userId, email, coins, products))
+            {
+                shopForm.ShowDialog();
+            }
             this.Show();
         }
 
         private void buttonUserInfo_Click(object sender, EventArgs e)
         {
             this.Hide();
-            UserForm userForm = new UserForm(username, userId, email, coins, products);
-            userForm.ShowDialog();
-            this.Close();
+            using (UserForm userForm = new UserForm(username, userId, email, coins, products))
+            {
+                userForm.ShowDialog();
+            }
+            this.Show();
         }
 
         private void buttonExit_Click(object sender, EventArgs e)

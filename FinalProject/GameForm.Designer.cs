@@ -27,9 +27,10 @@
             // 
             // buttonHebrewGames
             // 
-            this.buttonHebrewGames.Location = new System.Drawing.Point(150, 50);
+            this.buttonHebrewGames.Location = new System.Drawing.Point(200, 62);
+            this.buttonHebrewGames.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonHebrewGames.Name = "buttonHebrewGames";
-            this.buttonHebrewGames.Size = new System.Drawing.Size(100, 30);
+            this.buttonHebrewGames.Size = new System.Drawing.Size(133, 37);
             this.buttonHebrewGames.TabIndex = 0;
             this.buttonHebrewGames.Text = "משחקי עברית";
             this.buttonHebrewGames.UseVisualStyleBackColor = true;
@@ -37,9 +38,10 @@
             // 
             // buttonMathGames
             // 
-            this.buttonMathGames.Location = new System.Drawing.Point(150, 100);
+            this.buttonMathGames.Location = new System.Drawing.Point(200, 123);
+            this.buttonMathGames.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonMathGames.Name = "buttonMathGames";
-            this.buttonMathGames.Size = new System.Drawing.Size(100, 30);
+            this.buttonMathGames.Size = new System.Drawing.Size(133, 37);
             this.buttonMathGames.TabIndex = 1;
             this.buttonMathGames.Text = "משחקי חשבון";
             this.buttonMathGames.UseVisualStyleBackColor = true;
@@ -47,9 +49,10 @@
             // 
             // buttonEnglishGames
             // 
-            this.buttonEnglishGames.Location = new System.Drawing.Point(150, 150);
+            this.buttonEnglishGames.Location = new System.Drawing.Point(200, 185);
+            this.buttonEnglishGames.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonEnglishGames.Name = "buttonEnglishGames";
-            this.buttonEnglishGames.Size = new System.Drawing.Size(100, 30);
+            this.buttonEnglishGames.Size = new System.Drawing.Size(133, 37);
             this.buttonEnglishGames.TabIndex = 2;
             this.buttonEnglishGames.Text = "משחקי אנגלית";
             this.buttonEnglishGames.UseVisualStyleBackColor = true;
@@ -57,9 +60,10 @@
             // 
             // buttonBackToMain
             // 
-            this.buttonBackToMain.Location = new System.Drawing.Point(150, 200);
+            this.buttonBackToMain.Location = new System.Drawing.Point(200, 246);
+            this.buttonBackToMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonBackToMain.Name = "buttonBackToMain";
-            this.buttonBackToMain.Size = new System.Drawing.Size(100, 30);
+            this.buttonBackToMain.Size = new System.Drawing.Size(133, 37);
             this.buttonBackToMain.TabIndex = 3;
             this.buttonBackToMain.Text = "חזרה למסך ראשי";
             this.buttonBackToMain.UseVisualStyleBackColor = true;
@@ -67,16 +71,19 @@
             // 
             // GameForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 300);
+            this.ClientSize = new System.Drawing.Size(533, 369);
             this.Controls.Add(this.buttonBackToMain);
             this.Controls.Add(this.buttonEnglishGames);
             this.Controls.Add(this.buttonMathGames);
             this.Controls.Add(this.buttonHebrewGames);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GameForm";
             this.Text = "GameForm";
+    
             this.ResumeLayout(false);
+
         }
     }
 }

@@ -36,6 +36,7 @@
             this.buttonGames.TabIndex = 0;
             this.buttonGames.Text = "משחקי לימוד";
             this.buttonGames.UseVisualStyleBackColor = true;
+            this.buttonGames.Click += new System.EventHandler(this.buttonGames_Click);
             // 
             // buttonShop
             // 
