@@ -19,7 +19,6 @@ namespace FinalProject
             this.email = email;
             this.coins = coins;
             this.products = products;
-            this.Load += new EventHandler(EnglishGamesForm_Load); // Add the load event handler
         }
 
         private void buttonBackToGames_Click(object sender, EventArgs e)
@@ -32,33 +31,28 @@ namespace FinalProject
 
         private void buttonLetterOrder_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            EnglishLetterOrderGameForm letterOrderGameForm = new EnglishLetterOrderGameForm(username, userId, email, coins, products);
-            letterOrderGameForm.ShowDialog();
-            this.Close();
+                this.Hide();
+                EnglishLetterOrderGameForm letterOrderGameForm = new EnglishLetterOrderGameForm(username, userId, email, coins, products);
+                letterOrderGameForm.ShowDialog();
+                this.Close();
+
         }
 
         private void buttonLetterMatch_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            EnglishWordMatchGameForm wordMatchGameForm = new EnglishWordMatchGameForm(username, userId, email, coins, products);
-            wordMatchGameForm.ShowDialog();
-            this.Close();
+                this.Hide();
+                EnglishWordMatchGameForm wordMatchGameForm = new EnglishWordMatchGameForm(username, userId, email, coins, products);
+                wordMatchGameForm.ShowDialog();
+                this.Close();
         }
 
         private void buttonMemoryGame_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MemoryGameFormEng memoryGameFormEng = new MemoryGameFormEng(username, userId, email, coins, products);
-            memoryGameFormEng.ShowDialog();
-            this.Close();
+                this.Hide();
+                MemoryGameFormEng memoryGameFormEng = new MemoryGameFormEng(username, userId, email, coins, products);
+                memoryGameFormEng.ShowDialog();
+                this.Close();
         }
 
-        private void EnglishGamesForm_Load(object sender, EventArgs e)
-        {
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.RightToLeft = RightToLeft.Yes;
-            this.RightToLeftLayout = true;
-        }
     }
 }

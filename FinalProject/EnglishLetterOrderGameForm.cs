@@ -26,7 +26,6 @@ namespace FinalProject
             this.products = products;
             this.currentLetterIndex = 0;
             labelPrompt.Text = "Type the letters in alphabetical order";
-            this.Load += new EventHandler(EnglishLetterOrderGameForm_Load); // Add load event handler
         }
 
         private void buttonSubmit_Click(object sender, EventArgs e)
@@ -103,8 +102,5 @@ namespace FinalProject
             labelFeedback.TextAlign = ContentAlignment.MiddleRight;
         }
 
-        private void labelFeedback_Click(object sender, EventArgs e)
-        {
-        }
     }
 }

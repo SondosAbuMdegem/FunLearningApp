@@ -87,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 400);
+            this.ClientSize = new System.Drawing.Size(524, 392);
             this.Controls.Add(this.buttonBackToGames);
             this.Controls.Add(this.buttonMemoryGame);
             this.Controls.Add(this.buttonLetterMatch);
@@ -96,7 +96,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EnglishGamesForm";
             this.Text = "English Games";
-            this.Load += new System.EventHandler(this.EnglishGamesForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

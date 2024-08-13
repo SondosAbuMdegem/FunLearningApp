@@ -53,10 +53,8 @@
             this.labelFeedback.Location = new System.Drawing.Point(163, 165);
             this.labelFeedback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFeedback.Name = "labelFeedback";
-            this.labelFeedback.Size = new System.Drawing.Size(69, 16);
+            this.labelFeedback.Size = new System.Drawing.Size(0, 16);
             this.labelFeedback.TabIndex = 2;
-            this.labelFeedback.Text = "";
-            this.labelFeedback.Click += new System.EventHandler(this.labelFeedback_Click);
             // 
             // buttonSubmit
             // 

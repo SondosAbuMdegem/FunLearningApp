@@ -23,14 +23,6 @@ namespace FinalProject
             this.coins = coins;
             this.products = products;
             GenerateNewQuestion();
-            this.Load += new EventHandler(AdditionGameForm_Load); // Add the load event handler
-        }
-
-        private void AdditionGameForm_Load(object sender, EventArgs e)
-        {
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.RightToLeft = RightToLeft.Yes;
-            this.RightToLeftLayout = true;
         }
 
         private void GenerateNewQuestion()
@@ -38,7 +30,7 @@ namespace FinalProject
             int num1 = random.Next(1, 51);
             int num2 = random.Next(1, 51);
             labelQuestion.Text = $"{num1} + {num2} = ?";
-            labelQuestion.Tag = num1 + num2; // Store the correct answer in the tag
+            labelQuestion.Tag = num1 + num2; 
         }
 
         private void buttonSubmit_Click(object sender, EventArgs e)
@@ -69,11 +61,11 @@ namespace FinalProject
                 ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
                 int rowCount = worksheet.Dimension?.Rows ?? 0;
 
-                for (int row = 2; row <= rowCount; row++) // Start from 2 to skip headers
+                for (int row = 2; row <= rowCount; row++) 
                 {
                     if (worksheet.Cells[row, 1].Text == username)
                     {
-                        worksheet.Cells[row, 6].Value = coins; // Assuming the coins are in the 6th column
+                        worksheet.Cells[row, 6].Value = coins; 
                         package.Save();
                         break;
                     }

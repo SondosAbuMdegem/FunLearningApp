@@ -33,7 +33,6 @@ namespace FinalProject
             this.products = products;
             this.currentImageIndex = 0;
             LoadNextImage();
-            this.Load += new EventHandler(EnglishWordMatchGameForm_Load); // Add load event handler
         }
 
         private void LoadNextImage()
@@ -101,15 +100,6 @@ namespace FinalProject
             EnglishGamesForm englishGamesForm = new EnglishGamesForm(username, userId, email, coins, products);
             englishGamesForm.ShowDialog();
             this.Close();
-        }
-
-        private void EnglishWordMatchGameForm_Load(object sender, EventArgs e)
-        {
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.RightToLeft = RightToLeft.Yes;
-            this.RightToLeftLayout = true;
-
-            labelFeedback.TextAlign = ContentAlignment.MiddleRight;
         }
     }
 }
