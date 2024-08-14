@@ -50,24 +50,8 @@ namespace FinalProject
         private void buttonBackToMain_Click(object sender, EventArgs e)
         {
             this.Hide();
-
-            MainForm mainForm = null;
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form is MainForm)
-                {
-                    mainForm = (MainForm)form;
-                    break;
-                }
-            }
-
-            if (mainForm == null)
-            {
-                mainForm = new MainForm(username, userId, email, coins, products);
-            }
-
-            mainForm.Show();
-            mainForm.BringToFront(); // Bring the main form to the front
+            MainForm mainForm = new MainForm(username, userId, email, coins, products);
+            mainForm.ShowDialog();
             this.Close();
         }
 

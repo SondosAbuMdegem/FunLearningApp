@@ -91,7 +91,7 @@ namespace FinalProject
             this.Hide();
             LoginForm loginForm = new LoginForm();
             loginForm.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private bool IsValidEmail(string email)

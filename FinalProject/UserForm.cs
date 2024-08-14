@@ -131,7 +131,7 @@ namespace FinalProject
         {
             this.Hide();
             MainForm mainForm = new MainForm(username, userId, email, coins, products);
-            mainForm.Show();
+            mainForm.ShowDialog();
             this.Close();
         }
 

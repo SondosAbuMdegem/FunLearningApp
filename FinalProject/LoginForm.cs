@@ -141,7 +141,7 @@ namespace FinalProject
             this.Hide();
             RegisterForm registerForm = new RegisterForm();
             registerForm.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private bool ValidateUser(string username, string password)
