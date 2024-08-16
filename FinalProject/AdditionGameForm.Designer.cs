@@ -31,7 +31,7 @@
             this.labelQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelQuestion.Location = new System.Drawing.Point(100, 50);
             this.labelQuestion.Name = "labelQuestion";
-            this.labelQuestion.Size = new System.Drawing.Size(150, 31);
+            this.labelQuestion.Size = new System.Drawing.Size(99, 31);
             this.labelQuestion.TabIndex = 0;
             this.labelQuestion.Text = "השאלה";
             // 
@@ -70,9 +70,11 @@
             this.Controls.Add(this.textBoxAnswer);
             this.Controls.Add(this.labelQuestion);
             this.Name = "AdditionGameForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Addition Game";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
     }
 }

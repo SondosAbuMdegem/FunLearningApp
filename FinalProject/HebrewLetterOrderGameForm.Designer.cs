@@ -42,7 +42,7 @@
             // textBoxInput
             // 
             this.textBoxInput.Location = new System.Drawing.Point(196, 93);
-            this.textBoxInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxInput.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxInput.Name = "textBoxInput";
             this.textBoxInput.Size = new System.Drawing.Size(132, 22);
             this.textBoxInput.TabIndex = 1;
@@ -53,13 +53,13 @@
             this.labelFeedback.Location = new System.Drawing.Point(196, 136);
             this.labelFeedback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFeedback.Name = "labelFeedback";
-            this.labelFeedback.Size = new System.Drawing.Size(0, 16);
+            this.labelFeedback.Size = new System.Drawing.Size(0, 17);
             this.labelFeedback.TabIndex = 2;
             // 
             // buttonSubmit
             // 
             this.buttonSubmit.Location = new System.Drawing.Point(195, 209);
-            this.buttonSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(133, 37);
             this.buttonSubmit.TabIndex = 3;
@@ -70,7 +70,7 @@
             // buttonBack
             // 
             this.buttonBack.Location = new System.Drawing.Point(195, 270);
-            this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(4);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(133, 37);
             this.buttonBack.TabIndex = 4;
@@ -88,8 +88,9 @@
             this.Controls.Add(this.labelFeedback);
             this.Controls.Add(this.textBoxInput);
             this.Controls.Add(this.labelPrompt);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HebrewLetterOrderGameForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "כתיבת אותיות לפי סדר";
             this.ResumeLayout(false);
             this.PerformLayout();

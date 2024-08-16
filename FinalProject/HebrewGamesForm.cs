@@ -52,5 +52,10 @@ namespace FinalProject
             gameForm.ShowDialog();
             this.Close();
         }
+
+        private void HebrewGamesForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

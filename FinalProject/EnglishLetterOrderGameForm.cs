@@ -25,7 +25,7 @@ namespace FinalProject
             this.coins = coins;
             this.products = products;
             this.currentLetterIndex = 0;
-            labelPrompt.Text = "Type the letters in alphabetical order";
+            
         }
 
         private void buttonSubmit_Click(object sender, EventArgs e)
@@ -35,12 +35,30 @@ namespace FinalProject
                 currentLetterIndex++;
                 if (currentLetterIndex < englishLetters.Length)
                 {
+                    int centerX = 266; 
+                    int yPosition = 210;
+                    labelFeedback.Font = new Font("Arial", 10, FontStyle.Bold); 
+                    labelFeedback.ForeColor = Color.Green; 
+                    labelFeedback.BackColor = Color.LightYellow; 
+                    labelFeedback.TextAlign = ContentAlignment.MiddleCenter; 
+                    labelFeedback.BorderStyle = BorderStyle.FixedSingle; 
+                    labelFeedback.Padding = new Padding(5);                            
+                    labelFeedback.Location = new Point(centerX , yPosition);
                     labelFeedback.Text = "Correct, keep going!";
                     textBoxInput.Clear();
                     UpdateCurrentLetter();
                 }
                 else
                 {
+                    int centerX = 266;
+                    int yPosition = 210;
+                    labelFeedback.Font = new Font("Arial", 10, FontStyle.Bold); // Set font style, size, and weight
+                    labelFeedback.ForeColor = Color.Green; // Set the text color
+                    labelFeedback.BackColor = Color.LightYellow; // Set the background color
+                    labelFeedback.TextAlign = ContentAlignment.MiddleCenter; // Center the text within the label
+                    labelFeedback.BorderStyle = BorderStyle.FixedSingle; // Add a border to the label
+                    labelFeedback.Padding = new Padding(5);
+                    labelFeedback.Location = new Point(centerX, yPosition);
                     labelFeedback.Text = "You won! You've earned 10 coins.";
                     coins += 10;
                     UpdateUserCoins();
@@ -49,6 +67,15 @@ namespace FinalProject
             }
             else
             {
+                int centerX = 266;
+                int yPosition = 210;
+                labelFeedback.Font = new Font("Arial", 10, FontStyle.Bold); // Set font style, size, and weight
+                labelFeedback.ForeColor = Color.Green; // Set the text color
+                labelFeedback.BackColor = Color.LightYellow; // Set the background color
+                labelFeedback.TextAlign = ContentAlignment.MiddleCenter; // Center the text within the label
+                labelFeedback.BorderStyle = BorderStyle.FixedSingle; // Add a border to the label
+                labelFeedback.Padding = new Padding(5);
+                labelFeedback.Location = new Point(centerX, yPosition);
                 labelFeedback.Text = "Incorrect, try again.";
             }
         }
@@ -64,7 +91,7 @@ namespace FinalProject
         private void UpdateUserCoins()
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            string filePath = @"C:\Users\m1571\source\repos\FinalProject\UserData.xlsx";
+            string filePath = @"C:\Users\mahmo\source\repos\FinalProject\UserData.xlsx";
 
             FileInfo fileInfo = new FileInfo(filePath);
             using (ExcelPackage package = new ExcelPackage(fileInfo))
@@ -94,13 +121,19 @@ namespace FinalProject
 
         private void EnglishLetterOrderGameForm_Load(object sender, EventArgs e)
         {
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.RightToLeft = RightToLeft.Yes;
-            this.RightToLeftLayout = true;
-
+            this.StartPosition = FormStartPosition.CenterScreen;         
             labelPrompt.TextAlign = ContentAlignment.MiddleRight;
             labelFeedback.TextAlign = ContentAlignment.MiddleRight;
         }
 
+        private void EnglishLetterOrderGameForm_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

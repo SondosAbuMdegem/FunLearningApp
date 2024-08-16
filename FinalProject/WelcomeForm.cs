@@ -41,8 +41,6 @@ namespace FinalProject
         private void WelcomeForm_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.RightToLeft = RightToLeft.Yes;
-            this.RightToLeftLayout = true;
         }
     }
 }

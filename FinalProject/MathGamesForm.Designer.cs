@@ -94,10 +94,12 @@
             this.Controls.Add(this.labelCategory);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MathGamesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "משחקי חשבון";
             this.Load += new System.EventHandler(this.MathGamesForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
     }
 }

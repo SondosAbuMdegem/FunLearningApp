@@ -93,7 +93,9 @@
             this.Controls.Add(this.labelCategory);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HebrewGamesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "משחקי עברית";
+            this.Load += new System.EventHandler(this.HebrewGamesForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

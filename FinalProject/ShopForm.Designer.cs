@@ -49,7 +49,7 @@
             this.labelCoins.AutoSize = true;
             this.labelCoins.Location = new System.Drawing.Point(326, 19);
             this.labelCoins.Name = "labelCoins";
-            this.labelCoins.Size = new System.Drawing.Size(95, 16);
+            this.labelCoins.Size = new System.Drawing.Size(94, 17);
             this.labelCoins.TabIndex = 0;
             this.labelCoins.Text = "מטבעות זמינים:";
             // 
@@ -182,6 +182,7 @@
             this.Controls.Add(this.buttonBuy);
             this.Controls.Add(this.labelCoins);
             this.Name = "ShopForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "חנות";
             this.Load += new System.EventHandler(this.ShopForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProduct)).EndInit();

@@ -236,6 +236,9 @@
     <EmbeddedResource Include="MathGamesForm.resx">
       <DependentUpon>MathGamesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MemoryGameForm.resx">
+      <DependentUpon>MemoryGameForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MemoryGameFormEng.resx">
       <DependentUpon>MemoryGameFormEng.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +253,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
@@ -404,6 +408,18 @@
     <Content Include="Images\us.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Screenshot 2024-08-15 222734.png" />
+    <None Include="Resources\Screenshot 2024-08-15 120257.png" />
+    <None Include="Resources\Screenshot 2024-08-15 111903.png" />
+    <None Include="Resources\Screenshot 2024-08-14 220010.png" />
+    <None Include="Resources\Screenshot 2024-08-15 215119.png" />
+    <None Include="Resources\Screenshot 2024-08-15 214924.png" />
+    <None Include="Resources\Screenshot 2024-08-15 191959.png" />
+    <None Include="Resources\Screenshot 2024-08-14 2148151.png" />
+    <None Include="Resources\Screenshot 2024-08-14 214815.png" />
+    <None Include="Resources\Screenshot 2024-08-15 185029.png" />
+    <None Include="Resources\Screenshot 2024-08-15 184805.png" />
+    <None Include="Resources\Screenshot 2024-08-15 113648.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

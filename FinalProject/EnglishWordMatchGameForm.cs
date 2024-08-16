@@ -44,6 +44,15 @@ namespace FinalProject
             }
             else
             {
+                int centerX = 166;
+                int yPosition = 306;
+                labelFeedback.Font = new Font("Arial", 10, FontStyle.Bold); 
+                labelFeedback.ForeColor = Color.Green; 
+                labelFeedback.BackColor = Color.LightYellow; 
+                labelFeedback.TextAlign = ContentAlignment.MiddleCenter;
+                labelFeedback.BorderStyle = BorderStyle.FixedSingle; 
+                labelFeedback.Padding = new Padding(5);
+                labelFeedback.Location = new Point(centerX , yPosition);
                 labelFeedback.Text = "You won! You've earned 10 coins.";
                 coins += 10;
                 UpdateUserCoins();
@@ -56,6 +65,15 @@ namespace FinalProject
         {
             if (comboBoxWords.SelectedItem == null)
             {
+                int centerX = 166;
+                int yPosition = 306;
+                labelFeedback.Font = new Font("Arial", 10, FontStyle.Bold);
+                labelFeedback.ForeColor = Color.Green; 
+                labelFeedback.BackColor = Color.LightYellow;
+                labelFeedback.TextAlign = ContentAlignment.MiddleCenter;
+                labelFeedback.BorderStyle = BorderStyle.FixedSingle; 
+                labelFeedback.Padding = new Padding(5);
+                labelFeedback.Location = new Point(centerX, yPosition);
                 labelFeedback.Text = "Select a word from the list.";
                 return;
             }
@@ -67,14 +85,24 @@ namespace FinalProject
             }
             else
             {
+                int centerX = 166;
+                int yPosition = 306;
+                labelFeedback.Font = new Font("Arial", 10, FontStyle.Bold);
+                labelFeedback.ForeColor = Color.Green; 
+                labelFeedback.BackColor = Color.LightYellow; 
+                labelFeedback.TextAlign = ContentAlignment.MiddleCenter; 
+                labelFeedback.BorderStyle = BorderStyle.FixedSingle;
+                labelFeedback.Padding = new Padding(5);
+                labelFeedback.Location = new Point(centerX, yPosition);
                 labelFeedback.Text = "Incorrect, try again.";
             }
+
         }
 
         private void UpdateUserCoins()
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            string filePath = @"C:\Users\m1571\source\repos\FinalProject\UserData.xlsx";
+            string filePath = @"C:\Users\mahmo\source\repos\FinalProject\UserData.xlsx";
 
             FileInfo fileInfo = new FileInfo(filePath);
             using (ExcelPackage package = new ExcelPackage(fileInfo))

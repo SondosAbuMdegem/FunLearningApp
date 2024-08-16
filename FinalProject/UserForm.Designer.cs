@@ -84,7 +84,7 @@ namespace FinalProject
             this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelPassword.Size = new System.Drawing.Size(47, 16);
+            this.labelPassword.Size = new System.Drawing.Size(48, 17);
             this.labelPassword.TabIndex = 3;
             this.labelPassword.Text = "סיסמה:";
             // 
@@ -106,7 +106,7 @@ namespace FinalProject
             this.labelID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelID.Name = "labelID";
             this.labelID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelID.Size = new System.Drawing.Size(62, 16);
+            this.labelID.Size = new System.Drawing.Size(65, 17);
             this.labelID.TabIndex = 5;
             this.labelID.Text = "מספר ת\"ז:";
             // 
@@ -117,7 +117,7 @@ namespace FinalProject
             this.labelEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelEmail.Size = new System.Drawing.Size(77, 16);
+            this.labelEmail.Size = new System.Drawing.Size(74, 17);
             this.labelEmail.TabIndex = 7;
             this.labelEmail.Text = "כתובת מייל:";
             // 
@@ -128,7 +128,7 @@ namespace FinalProject
             this.labelCoins.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCoins.Name = "labelCoins";
             this.labelCoins.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelCoins.Size = new System.Drawing.Size(88, 16);
+            this.labelCoins.Size = new System.Drawing.Size(87, 17);
             this.labelCoins.TabIndex = 9;
             this.labelCoins.Text = "כמות מטבעות:";
             // 
@@ -139,7 +139,7 @@ namespace FinalProject
             this.labelProducts.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProducts.Name = "labelProducts";
             this.labelProducts.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelProducts.Size = new System.Drawing.Size(84, 16);
+            this.labelProducts.Size = new System.Drawing.Size(86, 17);
             this.labelProducts.TabIndex = 11;
             this.labelProducts.Text = "מוצרים שנקנו:";
             // 
@@ -163,7 +163,7 @@ namespace FinalProject
             this.labelError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelError.Name = "labelError";
             this.labelError.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelError.Size = new System.Drawing.Size(0, 16);
+            this.labelError.Size = new System.Drawing.Size(0, 17);
             this.labelError.TabIndex = 13;
             // 
             // buttonBack
@@ -198,6 +198,7 @@ namespace FinalProject
             this.Name = "UserForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "הצגת משתמש";
             this.Load += new System.EventHandler(this.UserForm_Load);
             this.ResumeLayout(false);
