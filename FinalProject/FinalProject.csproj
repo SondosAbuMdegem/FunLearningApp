@@ -408,6 +408,7 @@
     <Content Include="Images\us.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\remote.jpg" />
     <None Include="Resources\Screenshot 2024-08-15 222734.png" />
     <None Include="Resources\Screenshot 2024-08-15 120257.png" />
     <None Include="Resources\Screenshot 2024-08-15 111903.png" />

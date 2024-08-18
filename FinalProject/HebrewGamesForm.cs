@@ -10,6 +10,7 @@ namespace FinalProject
         private string email;
         private int coins;
         private int products;
+        private PictureBox backgroundPictureBox;
 
         public HebrewGamesForm(string username, string userId, string email, int coins, int products)
         {
@@ -19,14 +20,35 @@ namespace FinalProject
             this.email = email;
             this.coins = coins;
             this.products = products;
+
+            // إعداد PictureBox للخلفية
+            backgroundPictureBox = new PictureBox();
+            backgroundPictureBox.Image = Properties.Resources.remote; // استخدام الصورة من الموارد
+            backgroundPictureBox.Dock = DockStyle.Fill;
+            backgroundPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            // إضافة PictureBox إلى النموذج
+            this.Controls.Add(backgroundPictureBox);
+            this.Controls.SetChildIndex(backgroundPictureBox, 0); // وضع PictureBox في الخلفية
+
+            // التأكد من أن عناصر التحكم الأخرى تظهر فوق الخلفية
+            this.Controls.SetChildIndex(buttonLetterOrder, 1);
+            this.Controls.SetChildIndex(buttonWordMatch, 1);
+            this.Controls.SetChildIndex(buttonMemoryGame, 1);
+            this.Controls.SetChildIndex(buttonBackToGames, 1);
         }
 
         private void buttonLetterOrder_Click(object sender, EventArgs e)
         {
             this.Hide();
             HebrewLetterOrderGameForm hebrewLetterOrderGameForm = new HebrewLetterOrderGameForm(username, userId, email, coins, products);
-            hebrewLetterOrderGameForm.ShowDialog(); 
-            this.Close();   
+            hebrewLetterOrderGameForm.ShowDialog();
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            // يمكن إضافة كود هنا إذا لزم الأمر
         }
 
         private void buttonWordMatch_Click(object sender, EventArgs e)
@@ -54,6 +76,16 @@ namespace FinalProject
         }
 
         private void HebrewGamesForm_Load(object sender, EventArgs e)
+        {
+            // يمكن إضافة كود هنا إذا لزم الأمر
+        }
+
+        private void labelCategory_Click(object sender, EventArgs e)
+        {
+            // يمكن إضافة كود هنا إذا لزم الأمر
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
         }
