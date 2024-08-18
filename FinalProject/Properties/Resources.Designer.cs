@@ -63,6 +63,36 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cartoon_like_kid_playing_with_board_game_indoors_23_2150898561 {
+            get {
+                object obj = ResourceManager.GetObject("cartoon-like-kid-playing-with-board-game-indoors_23-2150898561", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dreidels_confetti_candies_23_2147968771 {
+            get {
+                object obj = ResourceManager.GetObject("dreidels-confetti-candies_23-2147968771", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hanukkah_decoration_144627_47629 {
+            get {
+                object obj = ResourceManager.GetObject("hanukkah-decoration_144627-47629", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap remote {
             get {
                 object obj = ResourceManager.GetObject("remote", resourceCulture);

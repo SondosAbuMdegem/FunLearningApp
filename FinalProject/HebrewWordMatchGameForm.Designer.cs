@@ -30,8 +30,8 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(133, 37);
-            this.pictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox.Location = new System.Drawing.Point(188, 38);
+            this.pictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(267, 246);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -40,6 +40,7 @@
             // 
             // comboBoxWords
             // 
+            this.comboBoxWords.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.comboBoxWords.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWords.FormattingEnabled = true;
             this.comboBoxWords.Items.AddRange(new object[] {
@@ -48,8 +49,8 @@
             "אדום",
             "חמש",
             "עץ"});
-            this.comboBoxWords.Location = new System.Drawing.Point(133, 308);
-            this.comboBoxWords.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxWords.Location = new System.Drawing.Point(190, 341);
+            this.comboBoxWords.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxWords.Name = "comboBoxWords";
             this.comboBoxWords.Size = new System.Drawing.Size(265, 24);
             this.comboBoxWords.TabIndex = 1;
@@ -60,43 +61,49 @@
             this.labelFeedback.Location = new System.Drawing.Point(231, 349);
             this.labelFeedback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFeedback.Name = "labelFeedback";
-            this.labelFeedback.Size = new System.Drawing.Size(69, 16);
+            this.labelFeedback.Size = new System.Drawing.Size(0, 16);
             this.labelFeedback.TabIndex = 2;
-            this.labelFeedback.Text = "";
             // 
             // buttonSubmit
             // 
-            this.buttonSubmit.Location = new System.Drawing.Point(133, 382);
-            this.buttonSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSubmit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonSubmit.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonSubmit.Location = new System.Drawing.Point(54, 488);
+            this.buttonSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(133, 37);
             this.buttonSubmit.TabIndex = 3;
             this.buttonSubmit.Text = "בדוק";
-            this.buttonSubmit.UseVisualStyleBackColor = true;
+            this.buttonSubmit.UseVisualStyleBackColor = false;
             this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(267, 382);
-            this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonBack.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonBack.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonBack.Location = new System.Drawing.Point(524, 488);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(4);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(133, 37);
             this.buttonBack.TabIndex = 4;
             this.buttonBack.Text = "חזור";
-            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // HebrewWordMatchGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 492);
+            this.BackgroundImage = global::FinalProject.Properties.Resources.dreidels_confetti_candies_23_2147968771;
+            this.ClientSize = new System.Drawing.Size(697, 570);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.labelFeedback);
             this.Controls.Add(this.comboBoxWords);
             this.Controls.Add(this.pictureBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HebrewWordMatchGameForm";
             this.Text = "התאמת מילה לתמונה";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();

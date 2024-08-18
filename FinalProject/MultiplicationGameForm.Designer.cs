@@ -34,6 +34,7 @@
             this.labelQuestion.Size = new System.Drawing.Size(99, 31);
             this.labelQuestion.TabIndex = 0;
             this.labelQuestion.Text = "השאלה";
+            this.labelQuestion.Click += new System.EventHandler(this.labelQuestion_Click);
             // 
             // textBoxAnswer
             // 

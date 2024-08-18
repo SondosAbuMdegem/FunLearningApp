@@ -29,7 +29,7 @@
             // 
             this.labelQuestion.AutoSize = true;
             this.labelQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelQuestion.Location = new System.Drawing.Point(100, 50);
+            this.labelQuestion.Location = new System.Drawing.Point(124, 51);
             this.labelQuestion.Name = "labelQuestion";
             this.labelQuestion.Size = new System.Drawing.Size(99, 31);
             this.labelQuestion.TabIndex = 0;
@@ -37,7 +37,7 @@
             // 
             // textBoxAnswer
             // 
-            this.textBoxAnswer.Location = new System.Drawing.Point(100, 100);
+            this.textBoxAnswer.Location = new System.Drawing.Point(100, 98);
             this.textBoxAnswer.Name = "textBoxAnswer";
             this.textBoxAnswer.Size = new System.Drawing.Size(150, 22);
             this.textBoxAnswer.TabIndex = 1;

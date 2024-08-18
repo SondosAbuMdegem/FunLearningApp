@@ -408,6 +408,9 @@
     <Content Include="Images\us.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\hanukkah-decoration_144627-47629.jpg" />
+    <None Include="Resources\dreidels-confetti-candies_23-2147968771.jpg" />
+    <None Include="Resources\cartoon-like-kid-playing-with-board-game-indoors_23-2150898561.jpg" />
     <None Include="Resources\remote.jpg" />
     <None Include="Resources\Screenshot 2024-08-15 222734.png" />
     <None Include="Resources\Screenshot 2024-08-15 120257.png" />
