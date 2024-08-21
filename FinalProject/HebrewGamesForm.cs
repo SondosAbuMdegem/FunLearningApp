@@ -23,7 +23,6 @@ namespace FinalProject
 
             // إعداد PictureBox للخلفية
             backgroundPictureBox = new PictureBox();
-            backgroundPictureBox.Image = Properties.Resources.remote; // استخدام الصورة من الموارد
             backgroundPictureBox.Dock = DockStyle.Fill;
             backgroundPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
 
