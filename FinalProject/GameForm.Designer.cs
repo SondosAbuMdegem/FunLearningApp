@@ -61,7 +61,7 @@
             this.buttonEnglishGames.Location = new System.Drawing.Point(302, 159);
             this.buttonEnglishGames.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEnglishGames.Name = "buttonEnglishGames";
-            this.buttonEnglishGames.Size = new System.Drawing.Size(133, 37);
+            this.buttonEnglishGames.Size = new System.Drawing.Size(149, 37);
             this.buttonEnglishGames.TabIndex = 2;
             this.buttonEnglishGames.Text = "משחקי אנגלית";
             this.buttonEnglishGames.UseVisualStyleBackColor = false;
