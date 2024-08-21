@@ -66,9 +66,9 @@
             "מדבקות בצבע כחול - 40 מטבעות",
             "מדבקות בצבע ירוק - 40 מטבעות",
             "מדבקות צבעוניות - 50 מטבעות"});
-            this.listBoxStickers.Location = new System.Drawing.Point(6, 6);
+            this.listBoxStickers.Location = new System.Drawing.Point(33, 0);
             this.listBoxStickers.Name = "listBoxStickers";
-            this.listBoxStickers.Size = new System.Drawing.Size(210, 180);
+            this.listBoxStickers.Size = new System.Drawing.Size(374, 244);
             this.listBoxStickers.TabIndex = 1;
             this.listBoxStickers.SelectedIndexChanged += new System.EventHandler(this.listBoxStickers_SelectedIndexChanged);
             // 
@@ -130,10 +130,10 @@
             this.tabControlCategories.Controls.Add(this.tabPageStickers);
             this.tabControlCategories.Controls.Add(this.tabPageToys);
             this.tabControlCategories.Controls.Add(this.tabPagePencilCases);
-            this.tabControlCategories.Location = new System.Drawing.Point(504, 47);
+            this.tabControlCategories.Location = new System.Drawing.Point(306, 47);
             this.tabControlCategories.Name = "tabControlCategories";
             this.tabControlCategories.SelectedIndex = 0;
-            this.tabControlCategories.Size = new System.Drawing.Size(220, 215);
+            this.tabControlCategories.Size = new System.Drawing.Size(418, 268);
             this.tabControlCategories.TabIndex = 6;
             // 
             // tabPageStickers
@@ -142,7 +142,7 @@
             this.tabPageStickers.Location = new System.Drawing.Point(4, 25);
             this.tabPageStickers.Name = "tabPageStickers";
             this.tabPageStickers.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStickers.Size = new System.Drawing.Size(212, 186);
+            this.tabPageStickers.Size = new System.Drawing.Size(410, 239);
             this.tabPageStickers.TabIndex = 0;
             this.tabPageStickers.Text = "מדבקות";
             this.tabPageStickers.UseVisualStyleBackColor = true;
@@ -153,7 +153,7 @@
             this.tabPageToys.Location = new System.Drawing.Point(4, 25);
             this.tabPageToys.Name = "tabPageToys";
             this.tabPageToys.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageToys.Size = new System.Drawing.Size(383, 298);
+            this.tabPageToys.Size = new System.Drawing.Size(212, 186);
             this.tabPageToys.TabIndex = 1;
             this.tabPageToys.Text = "צעצועים";
             this.tabPageToys.UseVisualStyleBackColor = true;
@@ -164,7 +164,7 @@
             this.tabPagePencilCases.Location = new System.Drawing.Point(4, 25);
             this.tabPagePencilCases.Name = "tabPagePencilCases";
             this.tabPagePencilCases.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePencilCases.Size = new System.Drawing.Size(383, 298);
+            this.tabPagePencilCases.Size = new System.Drawing.Size(212, 186);
             this.tabPagePencilCases.TabIndex = 2;
             this.tabPagePencilCases.Text = "קלמרים";
             this.tabPagePencilCases.UseVisualStyleBackColor = true;
