@@ -21,20 +21,6 @@ namespace FinalProject
             this.coins = coins;
             this.products = products;
 
-            // إعداد PictureBox للخلفية
-            backgroundPictureBox = new PictureBox();
-            backgroundPictureBox.Dock = DockStyle.Fill;
-            backgroundPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-
-            // إضافة PictureBox إلى النموذج
-            this.Controls.Add(backgroundPictureBox);
-            this.Controls.SetChildIndex(backgroundPictureBox, 0); // وضع PictureBox في الخلفية
-
-            // التأكد من أن عناصر التحكم الأخرى تظهر فوق الخلفية
-            this.Controls.SetChildIndex(buttonLetterOrder, 1);
-            this.Controls.SetChildIndex(buttonWordMatch, 1);
-            this.Controls.SetChildIndex(buttonMemoryGame, 1);
-            this.Controls.SetChildIndex(buttonBackToGames, 1);
         }
 
         private void buttonLetterOrder_Click(object sender, EventArgs e)
@@ -45,10 +31,7 @@ namespace FinalProject
             this.Close();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            // يمكن إضافة كود هنا إذا لزم الأمر
-        }
+
 
         private void buttonWordMatch_Click(object sender, EventArgs e)
         {
@@ -72,21 +55,6 @@ namespace FinalProject
             GameForm gameForm = new GameForm(username, userId, email, coins, products);
             gameForm.ShowDialog();
             this.Close();
-        }
-
-        private void HebrewGamesForm_Load(object sender, EventArgs e)
-        {
-            // يمكن إضافة كود هنا إذا لزم الأمر
-        }
-
-        private void labelCategory_Click(object sender, EventArgs e)
-        {
-            // يمكن إضافة كود هنا إذا لزم الأمر
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

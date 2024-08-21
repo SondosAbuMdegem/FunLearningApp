@@ -105,7 +105,9 @@
             this.Controls.Add(this.pictureBox);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HebrewWordMatchGameForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "התאמת מילה לתמונה";
+            this.Load += new System.EventHandler(this.HebrewWordMatchGameForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -112,6 +112,7 @@
             this.Name = "EnglishGamesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "English Games";
+            this.Load += new System.EventHandler(this.EnglishGamesForm_Load);
             this.ResumeLayout(false);
 
         }

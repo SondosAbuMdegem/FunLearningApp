@@ -38,7 +38,6 @@
             this.labelCategory.Size = new System.Drawing.Size(237, 42);
             this.labelCategory.TabIndex = 0;
             this.labelCategory.Text = "משחקי עברית";
-            this.labelCategory.Click += new System.EventHandler(this.labelCategory_Click);
             // 
             // buttonLetterOrder
             // 
@@ -111,9 +110,7 @@
             this.Name = "HebrewGamesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "משחקי עברית";
-            this.Load += new System.EventHandler(this.HebrewGamesForm_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
     }

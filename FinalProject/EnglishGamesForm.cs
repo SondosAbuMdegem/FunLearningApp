@@ -54,5 +54,9 @@ namespace FinalProject
                 this.Close();
         }
 
+        private void EnglishGamesForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

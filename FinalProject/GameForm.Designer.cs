@@ -33,7 +33,7 @@
             this.buttonHebrewGames.Location = new System.Drawing.Point(302, 89);
             this.buttonHebrewGames.Margin = new System.Windows.Forms.Padding(4);
             this.buttonHebrewGames.Name = "buttonHebrewGames";
-            this.buttonHebrewGames.Size = new System.Drawing.Size(133, 37);
+            this.buttonHebrewGames.Size = new System.Drawing.Size(149, 37);
             this.buttonHebrewGames.TabIndex = 0;
             this.buttonHebrewGames.Text = "משחקי עברית";
             this.buttonHebrewGames.UseVisualStyleBackColor = false;
@@ -44,10 +44,10 @@
             this.buttonMathGames.BackColor = System.Drawing.Color.DarkCyan;
             this.buttonMathGames.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMathGames.ForeColor = System.Drawing.Color.White;
-            this.buttonMathGames.Location = new System.Drawing.Point(161, 119);
+            this.buttonMathGames.Location = new System.Drawing.Point(140, 119);
             this.buttonMathGames.Margin = new System.Windows.Forms.Padding(4);
             this.buttonMathGames.Name = "buttonMathGames";
-            this.buttonMathGames.Size = new System.Drawing.Size(133, 37);
+            this.buttonMathGames.Size = new System.Drawing.Size(154, 37);
             this.buttonMathGames.TabIndex = 1;
             this.buttonMathGames.Text = "משחקי חשבון";
             this.buttonMathGames.UseVisualStyleBackColor = false;
@@ -61,7 +61,7 @@
             this.buttonEnglishGames.Location = new System.Drawing.Point(302, 159);
             this.buttonEnglishGames.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEnglishGames.Name = "buttonEnglishGames";
-            this.buttonEnglishGames.Size = new System.Drawing.Size(133, 37);
+            this.buttonEnglishGames.Size = new System.Drawing.Size(149, 37);
             this.buttonEnglishGames.TabIndex = 2;
             this.buttonEnglishGames.Text = "משחקי אנגלית";
             this.buttonEnglishGames.UseVisualStyleBackColor = false;
