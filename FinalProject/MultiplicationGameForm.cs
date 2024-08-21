@@ -80,5 +80,10 @@ namespace FinalProject
             mathGamesForm.ShowDialog();
             this.Close();
         }
+
+        private void labelQuestion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

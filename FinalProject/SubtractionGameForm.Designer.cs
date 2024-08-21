@@ -40,7 +40,7 @@
             // 
             // textBoxAnswer
             // 
-            this.textBoxAnswer.Location = new System.Drawing.Point(100, 100);
+            this.textBoxAnswer.Location = new System.Drawing.Point(100, 98);
             this.textBoxAnswer.Name = "textBoxAnswer";
             this.textBoxAnswer.Size = new System.Drawing.Size(150, 22);
             this.textBoxAnswer.TabIndex = 1;

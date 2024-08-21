@@ -33,7 +33,7 @@
             this.buttonHebrewGames.Location = new System.Drawing.Point(302, 89);
             this.buttonHebrewGames.Margin = new System.Windows.Forms.Padding(4);
             this.buttonHebrewGames.Name = "buttonHebrewGames";
-            this.buttonHebrewGames.Size = new System.Drawing.Size(174, 37);
+            this.buttonHebrewGames.Size = new System.Drawing.Size(149, 37);
             this.buttonHebrewGames.TabIndex = 0;
             this.buttonHebrewGames.Text = "משחקי עברית";
             this.buttonHebrewGames.UseVisualStyleBackColor = false;
@@ -61,7 +61,7 @@
             this.buttonEnglishGames.Location = new System.Drawing.Point(302, 159);
             this.buttonEnglishGames.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEnglishGames.Name = "buttonEnglishGames";
-            this.buttonEnglishGames.Size = new System.Drawing.Size(174, 37);
+            this.buttonEnglishGames.Size = new System.Drawing.Size(133, 37);
             this.buttonEnglishGames.TabIndex = 2;
             this.buttonEnglishGames.Text = "משחקי אנגלית";
             this.buttonEnglishGames.UseVisualStyleBackColor = false;

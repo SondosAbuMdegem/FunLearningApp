@@ -10,6 +10,7 @@ namespace FinalProject
         private string email;
         private int coins;
         private int products;
+        private PictureBox backgroundPictureBox;
 
         public HebrewGamesForm(string username, string userId, string email, int coins, int products)
         {
@@ -19,15 +20,18 @@ namespace FinalProject
             this.email = email;
             this.coins = coins;
             this.products = products;
+
         }
 
         private void buttonLetterOrder_Click(object sender, EventArgs e)
         {
             this.Hide();
             HebrewLetterOrderGameForm hebrewLetterOrderGameForm = new HebrewLetterOrderGameForm(username, userId, email, coins, products);
-            hebrewLetterOrderGameForm.ShowDialog(); 
-            this.Close();   
+            hebrewLetterOrderGameForm.ShowDialog();
+            this.Close();
         }
+
+
 
         private void buttonWordMatch_Click(object sender, EventArgs e)
         {
@@ -51,11 +55,6 @@ namespace FinalProject
             GameForm gameForm = new GameForm(username, userId, email, coins, products);
             gameForm.ShowDialog();
             this.Close();
-        }
-
-        private void HebrewGamesForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -100,5 +100,10 @@ namespace FinalProject
             hebrewGamesForm.ShowDialog();
             this.Close();
         }
+
+        private void HebrewWordMatchGameForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
