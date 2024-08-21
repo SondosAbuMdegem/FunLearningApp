@@ -32,6 +32,7 @@ namespace FinalProject
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
@@ -60,6 +61,7 @@ namespace FinalProject
             // 
             // labelUsername
             // 
+            this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelUsername.Location = new System.Drawing.Point(65, 74);
             this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsername.Name = "labelUsername";
@@ -80,11 +82,12 @@ namespace FinalProject
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
+            this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelPassword.Location = new System.Drawing.Point(65, 123);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelPassword.Size = new System.Drawing.Size(48, 17);
+            this.labelPassword.Size = new System.Drawing.Size(54, 17);
             this.labelPassword.TabIndex = 3;
             this.labelPassword.Text = "סיסמה:";
             // 
@@ -102,44 +105,48 @@ namespace FinalProject
             // labelID
             // 
             this.labelID.AutoSize = true;
+            this.labelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelID.Location = new System.Drawing.Point(65, 172);
             this.labelID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelID.Name = "labelID";
             this.labelID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelID.Size = new System.Drawing.Size(65, 17);
+            this.labelID.Size = new System.Drawing.Size(74, 17);
             this.labelID.TabIndex = 5;
             this.labelID.Text = "מספר ת\"ז:";
             // 
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelEmail.Location = new System.Drawing.Point(65, 222);
             this.labelEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelEmail.Size = new System.Drawing.Size(74, 17);
+            this.labelEmail.Size = new System.Drawing.Size(85, 17);
             this.labelEmail.TabIndex = 7;
             this.labelEmail.Text = "כתובת מייל:";
             // 
             // labelCoins
             // 
             this.labelCoins.AutoSize = true;
+            this.labelCoins.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelCoins.Location = new System.Drawing.Point(65, 271);
             this.labelCoins.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCoins.Name = "labelCoins";
             this.labelCoins.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelCoins.Size = new System.Drawing.Size(87, 17);
+            this.labelCoins.Size = new System.Drawing.Size(99, 17);
             this.labelCoins.TabIndex = 9;
             this.labelCoins.Text = "כמות מטבעות:";
             // 
             // labelProducts
             // 
             this.labelProducts.AutoSize = true;
+            this.labelProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelProducts.Location = new System.Drawing.Point(65, 320);
             this.labelProducts.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProducts.Name = "labelProducts";
             this.labelProducts.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelProducts.Size = new System.Drawing.Size(86, 17);
+            this.labelProducts.Size = new System.Drawing.Size(99, 17);
             this.labelProducts.TabIndex = 11;
             this.labelProducts.Text = "מוצרים שנקנו:";
             // 
@@ -181,7 +188,10 @@ namespace FinalProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 444);
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(560, 444);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.buttonUpdate);
@@ -194,6 +204,7 @@ namespace FinalProject
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.labelTitle);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -207,6 +218,6 @@ namespace FinalProject
         }
 
     }
-    
+
 
 }

@@ -19,6 +19,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdditionGameForm));
             this.labelQuestion = new System.Windows.Forms.Label();
             this.textBoxAnswer = new System.Windows.Forms.TextBox();
             this.buttonSubmit = new System.Windows.Forms.Button();
@@ -28,6 +29,7 @@
             // labelQuestion
             // 
             this.labelQuestion.AutoSize = true;
+            this.labelQuestion.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelQuestion.Location = new System.Drawing.Point(100, 50);
             this.labelQuestion.Name = "labelQuestion";
@@ -37,6 +39,7 @@
             // 
             // textBoxAnswer
             // 
+            this.textBoxAnswer.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBoxAnswer.Location = new System.Drawing.Point(100, 100);
             this.textBoxAnswer.Name = "textBoxAnswer";
             this.textBoxAnswer.Size = new System.Drawing.Size(150, 22);
@@ -44,27 +47,33 @@
             // 
             // buttonSubmit
             // 
+            this.buttonSubmit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.buttonSubmit.Location = new System.Drawing.Point(100, 150);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(150, 30);
             this.buttonSubmit.TabIndex = 2;
             this.buttonSubmit.Text = "בדוק";
-            this.buttonSubmit.UseVisualStyleBackColor = true;
+            this.buttonSubmit.UseVisualStyleBackColor = false;
             this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
             // buttonBack
             // 
+            this.buttonBack.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.buttonBack.Location = new System.Drawing.Point(100, 200);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(150, 30);
             this.buttonBack.TabIndex = 3;
             this.buttonBack.Text = "חזור";
-            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // AdditionGameForm
             // 
-            this.ClientSize = new System.Drawing.Size(350, 300);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(479, 412);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.textBoxAnswer);

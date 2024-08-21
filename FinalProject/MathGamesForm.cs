@@ -57,5 +57,10 @@ namespace FinalProject
         {
             // You can add any additional initialization code here if needed
         }
+
+        private void labelCategory_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

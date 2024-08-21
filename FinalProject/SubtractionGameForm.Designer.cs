@@ -19,6 +19,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubtractionGameForm));
             this.labelQuestion = new System.Windows.Forms.Label();
             this.textBoxAnswer = new System.Windows.Forms.TextBox();
             this.buttonSubmit = new System.Windows.Forms.Button();
@@ -28,7 +29,9 @@
             // labelQuestion
             // 
             this.labelQuestion.AutoSize = true;
+            this.labelQuestion.BackColor = System.Drawing.Color.Transparent;
             this.labelQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelQuestion.ForeColor = System.Drawing.Color.Black;
             this.labelQuestion.Location = new System.Drawing.Point(100, 50);
             this.labelQuestion.Name = "labelQuestion";
             this.labelQuestion.Size = new System.Drawing.Size(99, 31);
@@ -64,6 +67,8 @@
             // 
             // SubtractionGameForm
             // 
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(350, 300);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonSubmit);
