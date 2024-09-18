@@ -52,24 +52,34 @@ namespace FinalProject
 
         private void UpdateUserCoins()
         {
-            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            string filePath = @"C:\Users\m1571\OneDrive\Desktop\FinalProject\UserData.xlsx";
-
-            FileInfo fileInfo = new FileInfo(filePath);
-            using (ExcelPackage package = new ExcelPackage(fileInfo))
+            try
             {
-                ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
-                int rowCount = worksheet.Dimension?.Rows ?? 0;
+                ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
-                for (int row = 2; row <= rowCount; row++) // Start from 2 to skip headers
+                // Get dynamic file path
+                string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "FinalProject");
+                string filePath = Path.Combine(folderPath, "UserData.xlsx");
+
+                FileInfo fileInfo = new FileInfo(filePath);
+                using (ExcelPackage package = new ExcelPackage(fileInfo))
                 {
-                    if (worksheet.Cells[row, 1].Text == username)
+                    ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
+                    int rowCount = worksheet.Dimension?.Rows ?? 0;
+
+                    for (int row = 2; row <= rowCount; row++) // Start from 2 to skip headers
                     {
-                        worksheet.Cells[row, 6].Value = coins; // Assuming the coins are in the 6th column
-                        package.Save();
-                        break;
+                        if (worksheet.Cells[row, 1].Text == username)
+                        {
+                            worksheet.Cells[row, 6].Value = coins; // Update coins
+                            package.Save(); // Save the file
+                            break;
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating user coins in Excel: {ex.Message}");
             }
         }
 

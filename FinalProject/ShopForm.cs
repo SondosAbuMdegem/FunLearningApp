@@ -13,6 +13,7 @@ namespace FinalProject
         private string email;
         private int coins;
         private int products;
+        private string excelFilePath;
 
         public ShopForm(string username, string userId, string email, int coins, int products)
         {
@@ -24,6 +25,7 @@ namespace FinalProject
             this.products = products;
             UpdateCoinsLabel();
             SetFontSize();
+            excelFilePath = GetExcelFilePath(); // Initialize the file path dynamically
         }
 
         private void UpdateCoinsLabel()
@@ -37,6 +39,39 @@ namespace FinalProject
             listBoxToys.Font = new Font(listBoxToys.Font.FontFamily, 14);
             listBoxPencilCases.Font = new Font(listBoxPencilCases.Font.FontFamily, 14);
             tabControlCategories.Font = new Font(tabControlCategories.Font.FontFamily, 14);
+        }
+
+        private string GetExcelFilePath()
+        {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string folderPath = Path.Combine(documentsPath, "FinalProject");
+
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+
+            string filePath = Path.Combine(folderPath, "UserData.xlsx");
+
+            if (!File.Exists(filePath))
+            {
+                using (var package = new ExcelPackage())
+                {
+                    var worksheet = package.Workbook.Worksheets.Add("Users");
+                    worksheet.Cells[1, 1].Value = "Username";
+                    worksheet.Cells[1, 2].Value = "Password";
+                    worksheet.Cells[1, 3].Value = "ID";
+                    worksheet.Cells[1, 4].Value = "Email";
+                    worksheet.Cells[1, 5].Value = "Gender";
+                    worksheet.Cells[1, 6].Value = "Coins";
+                    worksheet.Cells[1, 7].Value = "Products";
+                    package.SaveAs(new FileInfo(filePath));
+                }
+            }
+
+            return filePath;
         }
 
         private void buttonBuy_Click(object sender, EventArgs e)
@@ -76,25 +111,29 @@ namespace FinalProject
 
         private void UpdateUserCoins()
         {
-            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            string filePath = @"C:\Users\m1571\OneDrive\Desktop\FinalProject\UserData.xlsx";
-
-            FileInfo fileInfo = new FileInfo(filePath);
-            using (ExcelPackage package = new ExcelPackage(fileInfo))
+            try
             {
-                ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
-                int rowCount = worksheet.Dimension?.Rows ?? 0;
-
-                for (int row = 2; row <= rowCount; row++) // Start from 2 to skip headers
+                FileInfo fileInfo = new FileInfo(excelFilePath);
+                using (ExcelPackage package = new ExcelPackage(fileInfo))
                 {
-                    if (worksheet.Cells[row, 1].Text == username)
+                    ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
+                    int rowCount = worksheet.Dimension?.Rows ?? 0;
+
+                    for (int row = 2; row <= rowCount; row++) // Start from 2 to skip headers
                     {
-                        worksheet.Cells[row, 6].Value = coins; // Assuming the coins are in the 6th column
-                        worksheet.Cells[row, 7].Value = products; // Assuming the products are in the 7th column
-                        package.Save();
-                        break;
+                        if (worksheet.Cells[row, 1].Text == username)
+                        {
+                            worksheet.Cells[row, 6].Value = coins; // Coins in 6th column
+                            worksheet.Cells[row, 7].Value = products; // Products in 7th column
+                            package.Save();
+                            break;
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating user data: {ex.Message}");
             }
         }
 
@@ -158,12 +197,10 @@ namespace FinalProject
             }
         }
 
-
         private void DisplayProductImage(string productName)
         {
             string basePath = AppDomain.CurrentDomain.BaseDirectory;
             string imagePath = Path.Combine(basePath, "Images", $"{productName}.jpg");
-
 
             if (File.Exists(imagePath))
             {

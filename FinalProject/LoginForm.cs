@@ -8,11 +8,50 @@ namespace FinalProject
 {
     public partial class LoginForm : Form
     {
+        private string excelFilePath;
+
         public LoginForm()
         {
             InitializeComponent();
             this.Load += new EventHandler(LoginForm_Load);
+            excelFilePath = GetExcelFilePath(); // Initialize the file path dynamically
         }
+
+        // Function to determine the dynamic file path
+        private string GetExcelFilePath()
+        {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;  // Set the license context here
+
+            string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string folderPath = Path.Combine(documentsPath, "FinalProject");
+
+            // Create directory if it doesn't exist
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+
+            // Define file path for the Excel file
+            string filePath = Path.Combine(folderPath, "UserData.xlsx");
+
+            // Create the Excel file if it doesn't exist
+            if (!File.Exists(filePath))
+            {
+                using (var package = new ExcelPackage())
+                {
+                    var worksheet = package.Workbook.Worksheets.Add("Users");
+                    worksheet.Cells[1, 1].Value = "Username";
+                    worksheet.Cells[1, 2].Value = "Password";
+                    worksheet.Cells[1, 3].Value = "ID";
+                    worksheet.Cells[1, 4].Value = "Email";
+                    worksheet.Cells[1, 5].Value = "Gender";
+                    package.SaveAs(new FileInfo(filePath));
+                }
+            }
+
+            return filePath;
+        }
+
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
@@ -44,9 +83,8 @@ namespace FinalProject
         private string GetUserId(string username)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            string filePath = @"C:\Users\m1571\OneDrive\Desktop\FinalProject\UserData.xlsx";
 
-            FileInfo fileInfo = new FileInfo(filePath);
+            FileInfo fileInfo = new FileInfo(excelFilePath);
             using (ExcelPackage package = new ExcelPackage(fileInfo))
             {
                 ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
@@ -66,9 +104,8 @@ namespace FinalProject
         private string GetUserEmail(string username)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            string filePath = @"C:\Users\m1571\OneDrive\Desktop\FinalProject\UserData.xlsx";
 
-            FileInfo fileInfo = new FileInfo(filePath);
+            FileInfo fileInfo = new FileInfo(excelFilePath);
             using (ExcelPackage package = new ExcelPackage(fileInfo))
             {
                 ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
@@ -87,12 +124,9 @@ namespace FinalProject
 
         private int GetUserCoins(string username)
         {
-            // Implement logic to retrieve user coins from the Excel file
-            // Assuming coins are in the 6th column for example purposes
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            string filePath = @"C:\Users\m1571\OneDrive\Desktop\FinalProject\UserData.xlsx";
 
-            FileInfo fileInfo = new FileInfo(filePath);
+            FileInfo fileInfo = new FileInfo(excelFilePath);
             using (ExcelPackage package = new ExcelPackage(fileInfo))
             {
                 ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
@@ -112,12 +146,9 @@ namespace FinalProject
 
         private int GetUserProducts(string username)
         {
-            // Implement logic to retrieve user products from the Excel file
-            // Assuming products are in the 7th column for example purposes
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            string filePath = @"C:\Users\m1571\OneDrive\Desktop\FinalProject\UserData.xlsx";
 
-            FileInfo fileInfo = new FileInfo(filePath);
+            FileInfo fileInfo = new FileInfo(excelFilePath);
             using (ExcelPackage package = new ExcelPackage(fileInfo))
             {
                 ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
@@ -135,7 +166,6 @@ namespace FinalProject
             return 0;
         }
 
-
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -147,9 +177,8 @@ namespace FinalProject
         private bool ValidateUser(string username, string password)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            string filePath = @"C:\Users\m1571\OneDrive\Desktop\FinalProject\UserData.xlsx";
 
-            FileInfo fileInfo = new FileInfo(filePath);
+            FileInfo fileInfo = new FileInfo(excelFilePath);
             using (ExcelPackage package = new ExcelPackage(fileInfo))
             {
                 if (package.Workbook.Worksheets.Count == 0)

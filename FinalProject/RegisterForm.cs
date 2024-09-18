@@ -9,11 +9,51 @@ namespace FinalProject
 {
     public partial class RegisterForm : Form
     {
+        private string excelFilePath;
+
         public RegisterForm()
         {
             InitializeComponent();
             this.Load += new EventHandler(RegisterForm_Load);
+            excelFilePath = GetExcelFilePath(); // Initialize the file path dynamically
         }
+
+        // Function to determine the dynamic file path
+        private string GetExcelFilePath()
+        {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            // Set the file to be in a more accessible location for testing
+            string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string folderPath = Path.Combine(documentsPath, "FinalProject");
+
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+
+            string filePath = Path.Combine(folderPath, "UserData.xlsx");
+
+            // Create Excel file if it doesn't exist
+            if (!File.Exists(filePath))
+            {
+                using (var package = new ExcelPackage())
+                {
+                    var worksheet = package.Workbook.Worksheets.Add("Users");
+                    worksheet.Cells[1, 1].Value = "Username";
+                    worksheet.Cells[1, 2].Value = "Password";
+                    worksheet.Cells[1, 3].Value = "ID";
+                    worksheet.Cells[1, 4].Value = "Email";
+                    worksheet.Cells[1, 5].Value = "Gender";
+                    worksheet.Cells[1, 6].Value = "Coins";
+                    worksheet.Cells[1, 7].Value = "Products";
+                    package.SaveAs(new FileInfo(filePath));
+                }
+            }
+
+            return filePath;
+        }
+
 
         private void RegisterForm_Load(object sender, EventArgs e)
         {
@@ -113,9 +153,8 @@ namespace FinalProject
         private bool IsUniqueUsername(string username)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            string filePath = @"C:\Users\m1571\OneDrive\Desktop\FinalProject\UserData.xlsx";
 
-            FileInfo fileInfo = new FileInfo(filePath);
+            FileInfo fileInfo = new FileInfo(excelFilePath);
             using (ExcelPackage package = new ExcelPackage(fileInfo))
             {
                 ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
@@ -136,9 +175,8 @@ namespace FinalProject
         private bool IsUniqueID(string id)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            string filePath = @"C:\Users\m1571\OneDrive\Desktop\FinalProject\UserData.xlsx";
 
-            FileInfo fileInfo = new FileInfo(filePath);
+            FileInfo fileInfo = new FileInfo(excelFilePath);
             using (ExcelPackage package = new ExcelPackage(fileInfo))
             {
                 ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
@@ -158,38 +196,55 @@ namespace FinalProject
 
         private void SaveToExcel(string username, string password, string id, string email, string gender)
         {
-            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            string filePath = @"C:\Users\m1571\OneDrive\Desktop\FinalProject\UserData.xlsx";
-
-            FileInfo fileInfo = new FileInfo(filePath);
-            using (ExcelPackage package = new ExcelPackage(fileInfo))
+            try
             {
-                ExcelWorksheet worksheet;
-                if (package.Workbook.Worksheets.Count == 0)
+                FileInfo fileInfo = new FileInfo(excelFilePath);
+                using (ExcelPackage package = new ExcelPackage(fileInfo))
                 {
-                    worksheet = package.Workbook.Worksheets.Add("Users");
-                    worksheet.Cells[1, 1].Value = "Username";
-                    worksheet.Cells[1, 2].Value = "Password";
-                    worksheet.Cells[1, 3].Value = "ID";
-                    worksheet.Cells[1, 4].Value = "Email";
-                    worksheet.Cells[1, 5].Value = "Gender";
-                }
-                else
-                {
-                    worksheet = package.Workbook.Worksheets[0];
-                }
+                    ExcelWorksheet worksheet;
+                    if (package.Workbook.Worksheets.Count == 0)
+                    {
+                        worksheet = package.Workbook.Worksheets.Add("Users");
+                        worksheet.Cells[1, 1].Value = "Username";
+                        worksheet.Cells[1, 2].Value = "Password";
+                        worksheet.Cells[1, 3].Value = "ID";
+                        worksheet.Cells[1, 4].Value = "Email";
+                        worksheet.Cells[1, 5].Value = "Gender";
+                        worksheet.Cells[1, 6].Value = "Coins";
+                        worksheet.Cells[1, 7].Value = "Products";
+                    }
+                    else
+                    {
+                        worksheet = package.Workbook.Worksheets[0];
+                    }
 
-                int rowCount = worksheet.Dimension?.Rows ?? 0;
-                worksheet.Cells[rowCount + 1, 1].Value = username;
-                worksheet.Cells[rowCount + 1, 2].Value = password;
-                worksheet.Cells[rowCount + 1, 3].Value = id;
-                worksheet.Cells[rowCount + 1, 4].Value = email;
-                worksheet.Cells[rowCount + 1, 5].Value = gender;
+                    int rowCount = worksheet.Dimension?.Rows ?? 0;
+                    worksheet.Cells[rowCount + 1, 1].Value = username;
+                    worksheet.Cells[rowCount + 1, 2].Value = password;
+                    worksheet.Cells[rowCount + 1, 3].Value = id;
+                    worksheet.Cells[rowCount + 1, 4].Value = email;
+                    worksheet.Cells[rowCount + 1, 5].Value = gender;
+                    worksheet.Cells[rowCount + 1, 6].Value = 0;
+                    worksheet.Cells[rowCount + 1, 7].Value = 0;
 
-                package.Save();
+                    // Save the Excel file
+                    package.Save();
+
+                    // Verify if file has been saved
+                    if (fileInfo.Exists)
+                    {
+                        MessageBox.Show("File exists at: " + fileInfo.FullName);
+                    }
+                    else
+                    {
+                        MessageBox.Show("File does not exist!");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving to Excel: {ex.Message}");
             }
         }
-
-        
     }
 }

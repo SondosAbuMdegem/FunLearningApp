@@ -42,7 +42,16 @@ namespace FinalProject
         private void LoadUserData(string username)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            string filePath = @"C:\Users\m1571\OneDrive\Desktop\FinalProject\UserData.xlsx";
+
+            // Get the dynamic file path
+            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "FinalProject");
+            string filePath = Path.Combine(folderPath, "UserData.xlsx");
+
+            if (!File.Exists(filePath))
+            {
+                MessageBox.Show("Error: The Excel file does not exist.", "File Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             FileInfo fileInfo = new FileInfo(filePath);
             using (ExcelPackage package = new ExcelPackage(fileInfo))
@@ -105,7 +114,16 @@ namespace FinalProject
         private void UpdateUserData(string newUsername, string newPassword)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            string filePath = @"C:\Users\m1571\OneDrive\Desktop\FinalProject\UserData.xlsx";
+
+            // Get the dynamic file path
+            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "FinalProject");
+            string filePath = Path.Combine(folderPath, "UserData.xlsx");
+
+            if (!File.Exists(filePath))
+            {
+                MessageBox.Show("Error: The Excel file does not exist.", "File Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             FileInfo fileInfo = new FileInfo(filePath);
             using (ExcelPackage package = new ExcelPackage(fileInfo))
