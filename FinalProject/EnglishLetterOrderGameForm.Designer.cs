@@ -95,7 +95,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FinalProject.Properties.Resources.Screenshot_2024_08_15_111903;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(550, 400);
+            this.ClientSize = new System.Drawing.Size(550, 416);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.labelFeedback);

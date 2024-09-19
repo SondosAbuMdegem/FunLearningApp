@@ -40,13 +40,13 @@ namespace FinalProject
             if (currentImageIndex < imageFiles.Length)
             {
                 pictureBox.ImageLocation = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", imageFiles[currentImageIndex]);
-                labelFeedback.Text = "";
+                
             }
             else
             {
-                int centerX = 166;
+                int centerX = 110;
                 int yPosition = 306;
-                labelFeedback.Font = new Font("Arial", 10, FontStyle.Bold); 
+                labelFeedback.Font = new Font("Arial", 8, FontStyle.Bold); 
                 labelFeedback.ForeColor = Color.Green; 
                 labelFeedback.BackColor = Color.LightYellow; 
                 labelFeedback.TextAlign = ContentAlignment.MiddleCenter;
@@ -80,15 +80,25 @@ namespace FinalProject
 
             if (comboBoxWords.SelectedItem.ToString() == correctWords[currentImageIndex])
             {
+                int centerX = 110;
+                int yPosition = 306;
+                labelFeedback.Font = new Font("Arial", 8, FontStyle.Bold);
+                labelFeedback.ForeColor = Color.Green;
+                labelFeedback.BackColor = Color.LightYellow;
+                labelFeedback.TextAlign = ContentAlignment.MiddleCenter;
+                labelFeedback.BorderStyle = BorderStyle.FixedSingle;
+                labelFeedback.Padding = new Padding(5);
+                labelFeedback.Location = new Point(centerX, yPosition);
+                labelFeedback.Text = "Correct, keep going";
                 currentImageIndex++;
                 LoadNextImage();
             }
             else
             {
-                int centerX = 166;
+                int centerX = 110;
                 int yPosition = 306;
-                labelFeedback.Font = new Font("Arial", 10, FontStyle.Bold);
-                labelFeedback.ForeColor = Color.Green; 
+                labelFeedback.Font = new Font("Arial", 8, FontStyle.Bold);
+                labelFeedback.ForeColor = Color.Red; 
                 labelFeedback.BackColor = Color.LightYellow; 
                 labelFeedback.TextAlign = ContentAlignment.MiddleCenter; 
                 labelFeedback.BorderStyle = BorderStyle.FixedSingle;
