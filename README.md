@@ -12,7 +12,6 @@ It helps children learn **Hebrew & English alphabets** and **basic mathematics**
 
 ## Technologies
 - C#  
-- .NET Framework / ASP.NET MVC  
 - Visual Studio IDE  
 
 ## How to Run
